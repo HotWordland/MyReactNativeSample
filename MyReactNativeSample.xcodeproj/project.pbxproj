@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F8481ED1BF435A800479615 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8481EC1BF435A800479615 /* main.m */; };
+		0F8481F01BF435A800479615 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8481EF1BF435A800479615 /* AppDelegate.m */; };
+		0F8481F31BF435A800479615 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8481F21BF435A800479615 /* ViewController.m */; };
+		0F8481F61BF435A800479615 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F8481F41BF435A800479615 /* Main.storyboard */; };
+		0F8481F81BF435A800479615 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F8481F71BF435A800479615 /* Assets.xcassets */; };
+		0F8481FB1BF435A800479615 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F8481F91BF435A800479615 /* LaunchScreen.storyboard */; };
+		0F8482051BF437AF00479615 /* ReactView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8482041BF437AF00479615 /* ReactView.m */; };
+		0F8482341BF43D8600479615 /* ConstraintUtilities+Description.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F84821A1BF43D8600479615 /* ConstraintUtilities+Description.m */; };
+		0F8482351BF43D8600479615 /* ConstraintUtilities+Install.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F84821D1BF43D8600479615 /* ConstraintUtilities+Install.m */; };
+		0F8482361BF43D8600479615 /* ConstraintUtilities+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8482201BF43D8600479615 /* ConstraintUtilities+Layout.m */; };
+		0F8482371BF43D8600479615 /* ConstraintUtilities+Matching.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8482261BF43D8600479615 /* ConstraintUtilities+Matching.m */; };
+		0F8482381BF43D8600479615 /* NSObject-Description.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F84822C1BF43D8600479615 /* NSObject-Description.m */; };
+		0F8482391BF43D8600479615 /* NSObject-Nametag.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F84822E1BF43D8600479615 /* NSObject-Nametag.m */; };
+		0F84823A1BF43D8600479615 /* NSView+BackgroundColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8482311BF43D8600479615 /* NSView+BackgroundColor.m */; };
+		0F84823B1BF43D8600479615 /* View-Nametag.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8482331BF43D8600479615 /* View-Nametag.m */; };
+		0F8482611BF4929C00479615 /* CalendarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8482601BF4929C00479615 /* CalendarManager.m */; };
+		0F99ECC41BF5E5690046E10D /* MyCustomViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F99ECC31BF5E5690046E10D /* MyCustomViewManager.m */; };
+		1725CEF1CA9D7317F0BD9FC7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6E6E8A5231312682C5ACDA /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0366A314E6F209E1E3EC6E40 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		0D6DEAD36E99F7EBC03A9F50 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		0F8481E81BF435A800479615 /* MyReactNativeSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyReactNativeSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F8481EC1BF435A800479615 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0F8481EE1BF435A800479615 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0F8481EF1BF435A800479615 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0F8481F11BF435A800479615 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0F8481F21BF435A800479615 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0F8481F51BF435A800479615 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0F8481F71BF435A800479615 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0F8481FA1BF435A800479615 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0F8481FC1BF435A800479615 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F8482031BF437AF00479615 /* ReactView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReactView.h; sourceTree = "<group>"; };
+		0F8482041BF437AF00479615 /* ReactView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReactView.m; sourceTree = "<group>"; };
+		0F84820E1BF439B200479615 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		0F8482191BF43D8600479615 /* ConstraintUtilities+Description.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ConstraintUtilities+Description.h"; sourceTree = "<group>"; };
+		0F84821A1BF43D8600479615 /* ConstraintUtilities+Description.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ConstraintUtilities+Description.m"; sourceTree = "<group>"; };
+		0F84821C1BF43D8600479615 /* ConstraintUtilities+Install.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ConstraintUtilities+Install.h"; sourceTree = "<group>"; };
+		0F84821D1BF43D8600479615 /* ConstraintUtilities+Install.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ConstraintUtilities+Install.m"; sourceTree = "<group>"; };
+		0F84821F1BF43D8600479615 /* ConstraintUtilities+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ConstraintUtilities+Layout.h"; sourceTree = "<group>"; };
+		0F8482201BF43D8600479615 /* ConstraintUtilities+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ConstraintUtilities+Layout.m"; sourceTree = "<group>"; };
+		0F8482221BF43D8600479615 /* ConstraintUtilities+CreationMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ConstraintUtilities+CreationMacros.h"; sourceTree = "<group>"; };
+		0F8482231BF43D8600479615 /* ConstraintUtilities+Utility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ConstraintUtilities+Utility.h"; sourceTree = "<group>"; };
+		0F8482251BF43D8600479615 /* ConstraintUtilities+Matching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ConstraintUtilities+Matching.h"; sourceTree = "<group>"; };
+		0F8482261BF43D8600479615 /* ConstraintUtilities+Matching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ConstraintUtilities+Matching.m"; sourceTree = "<group>"; };
+		0F8482271BF43D8600479615 /* ConstraintPack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConstraintPack.h; sourceTree = "<group>"; };
+		0F8482291BF43D8600479615 /* NametagUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NametagUtilities.h; sourceTree = "<group>"; };
+		0F84822B1BF43D8600479615 /* NSObject-Description.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-Description.h"; sourceTree = "<group>"; };
+		0F84822C1BF43D8600479615 /* NSObject-Description.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject-Description.m"; sourceTree = "<group>"; };
+		0F84822D1BF43D8600479615 /* NSObject-Nametag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject-Nametag.h"; sourceTree = "<group>"; };
+		0F84822E1BF43D8600479615 /* NSObject-Nametag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject-Nametag.m"; sourceTree = "<group>"; };
+		0F8482301BF43D8600479615 /* NSView+BackgroundColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+BackgroundColor.h"; sourceTree = "<group>"; };
+		0F8482311BF43D8600479615 /* NSView+BackgroundColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+BackgroundColor.m"; sourceTree = "<group>"; };
+		0F8482321BF43D8600479615 /* View-Nametag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View-Nametag.h"; sourceTree = "<group>"; };
+		0F8482331BF43D8600479615 /* View-Nametag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View-Nametag.m"; sourceTree = "<group>"; };
+		0F84825F1BF4929C00479615 /* CalendarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarManager.h; sourceTree = "<group>"; };
+		0F8482601BF4929C00479615 /* CalendarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarManager.m; sourceTree = "<group>"; };
+		0F99ECC21BF5E5690046E10D /* MyCustomViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCustomViewManager.h; sourceTree = "<group>"; };
+		0F99ECC31BF5E5690046E10D /* MyCustomViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCustomViewManager.m; sourceTree = "<group>"; };
+		5E6E6E8A5231312682C5ACDA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0F8481E51BF435A800479615 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1725CEF1CA9D7317F0BD9FC7 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0F8481DF1BF435A800479615 = {
+			isa = PBXGroup;
+			children = (
+				0F8481EA1BF435A800479615 /* MyReactNativeSample */,
+				0F8481E91BF435A800479615 /* Products */,
+				68CB72CB84A48551857F810B /* Pods */,
+				6695C957B0F416DFA2C49F3B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0F8481E91BF435A800479615 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0F8481E81BF435A800479615 /* MyReactNativeSample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0F8481EA1BF435A800479615 /* MyReactNativeSample */ = {
+			isa = PBXGroup;
+			children = (
+				0F8482171BF43D8600479615 /* Constraints Pack */,
+				0F8482021BF437A400479615 /* React */,
+				0F8481EE1BF435A800479615 /* AppDelegate.h */,
+				0F8481EF1BF435A800479615 /* AppDelegate.m */,
+				0F8481F11BF435A800479615 /* ViewController.h */,
+				0F8481F21BF435A800479615 /* ViewController.m */,
+				0F8481F41BF435A800479615 /* Main.storyboard */,
+				0F8481F71BF435A800479615 /* Assets.xcassets */,
+				0F8481F91BF435A800479615 /* LaunchScreen.storyboard */,
+				0F8481FC1BF435A800479615 /* Info.plist */,
+				0F8481EB1BF435A800479615 /* Supporting Files */,
+			);
+			path = MyReactNativeSample;
+			sourceTree = "<group>";
+		};
+		0F8481EB1BF435A800479615 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0F8481EC1BF435A800479615 /* main.m */,
+				0F84820E1BF439B200479615 /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0F8482021BF437A400479615 /* React */ = {
+			isa = PBXGroup;
+			children = (
+				0F8482031BF437AF00479615 /* ReactView.h */,
+				0F8482041BF437AF00479615 /* ReactView.m */,
+				0F84825F1BF4929C00479615 /* CalendarManager.h */,
+				0F8482601BF4929C00479615 /* CalendarManager.m */,
+				0F99ECC21BF5E5690046E10D /* MyCustomViewManager.h */,
+				0F99ECC31BF5E5690046E10D /* MyCustomViewManager.m */,
+			);
+			name = React;
+			sourceTree = "<group>";
+		};
+		0F8482171BF43D8600479615 /* Constraints Pack */ = {
+			isa = PBXGroup;
+			children = (
+				0F8482181BF43D8600479615 /* Constraint Description */,
+				0F84821B1BF43D8600479615 /* Constraint Install */,
+				0F84821E1BF43D8600479615 /* Constraint Layout */,
+				0F8482211BF43D8600479615 /* Constraint Macros */,
+				0F8482241BF43D8600479615 /* Constraint Matching */,
+				0F8482271BF43D8600479615 /* ConstraintPack.h */,
+				0F8482281BF43D8600479615 /* Nametag Utilities */,
+			);
+			path = "Constraints Pack";
+			sourceTree = SOURCE_ROOT;
+		};
+		0F8482181BF43D8600479615 /* Constraint Description */ = {
+			isa = PBXGroup;
+			children = (
+				0F8482191BF43D8600479615 /* ConstraintUtilities+Description.h */,
+				0F84821A1BF43D8600479615 /* ConstraintUtilities+Description.m */,
+			);
+			path = "Constraint Description";
+			sourceTree = "<group>";
+		};
+		0F84821B1BF43D8600479615 /* Constraint Install */ = {
+			isa = PBXGroup;
+			children = (
+				0F84821C1BF43D8600479615 /* ConstraintUtilities+Install.h */,
+				0F84821D1BF43D8600479615 /* ConstraintUtilities+Install.m */,
+			);
+			path = "Constraint Install";
+			sourceTree = "<group>";
+		};
+		0F84821E1BF43D8600479615 /* Constraint Layout */ = {
+			isa = PBXGroup;
+			children = (
+				0F84821F1BF43D8600479615 /* ConstraintUtilities+Layout.h */,
+				0F8482201BF43D8600479615 /* ConstraintUtilities+Layout.m */,
+			);
+			path = "Constraint Layout";
+			sourceTree = "<group>";
+		};
+		0F8482211BF43D8600479615 /* Constraint Macros */ = {
+			isa = PBXGroup;
+			children = (
+				0F8482221BF43D8600479615 /* ConstraintUtilities+CreationMacros.h */,
+				0F8482231BF43D8600479615 /* ConstraintUtilities+Utility.h */,
+			);
+			path = "Constraint Macros";
+			sourceTree = "<group>";
+		};
+		0F8482241BF43D8600479615 /* Constraint Matching */ = {
+			isa = PBXGroup;
+			children = (
+				0F8482251BF43D8600479615 /* ConstraintUtilities+Matching.h */,
+				0F8482261BF43D8600479615 /* ConstraintUtilities+Matching.m */,
+			);
+			path = "Constraint Matching";
+			sourceTree = "<group>";
+		};
+		0F8482281BF43D8600479615 /* Nametag Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0F8482291BF43D8600479615 /* NametagUtilities.h */,
+				0F84822A1BF43D8600479615 /* NSObject */,
+				0F84822F1BF43D8600479615 /* View */,
+			);
+			path = "Nametag Utilities";
+			sourceTree = "<group>";
+		};
+		0F84822A1BF43D8600479615 /* NSObject */ = {
+			isa = PBXGroup;
+			children = (
+				0F84822B1BF43D8600479615 /* NSObject-Description.h */,
+				0F84822C1BF43D8600479615 /* NSObject-Description.m */,
+				0F84822D1BF43D8600479615 /* NSObject-Nametag.h */,
+				0F84822E1BF43D8600479615 /* NSObject-Nametag.m */,
+			);
+			path = NSObject;
+			sourceTree = "<group>";
+		};
+		0F84822F1BF43D8600479615 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0F8482301BF43D8600479615 /* NSView+BackgroundColor.h */,
+				0F8482311BF43D8600479615 /* NSView+BackgroundColor.m */,
+				0F8482321BF43D8600479615 /* View-Nametag.h */,
+				0F8482331BF43D8600479615 /* View-Nametag.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6695C957B0F416DFA2C49F3B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E6E6E8A5231312682C5ACDA /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		68CB72CB84A48551857F810B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0366A314E6F209E1E3EC6E40 /* Pods.debug.xcconfig */,
+				0D6DEAD36E99F7EBC03A9F50 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0F8481E71BF435A800479615 /* MyReactNativeSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F8481FF1BF435A800479615 /* Build configuration list for PBXNativeTarget "MyReactNativeSample" */;
+			buildPhases = (
+				C59EEFDA463F21346869F30F /* Check Pods Manifest.lock */,
+				0F8481E41BF435A800479615 /* Sources */,
+				0F8481E51BF435A800479615 /* Frameworks */,
+				0F8481E61BF435A800479615 /* Resources */,
+				0D84F046F7B27212DF07E2D8 /* Embed Pods Frameworks */,
+				F6C683DAA098854DD33E4B93 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyReactNativeSample;
+			productName = MyReactNativeSample;
+			productReference = 0F8481E81BF435A800479615 /* MyReactNativeSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0F8481E01BF435A800479615 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "情热大陆-巫龙";
+				TargetAttributes = {
+					0F8481E71BF435A800479615 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = 0F8481E31BF435A800479615 /* Build configuration list for PBXProject "MyReactNativeSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0F8481DF1BF435A800479615;
+			productRefGroup = 0F8481E91BF435A800479615 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0F8481E71BF435A800479615 /* MyReactNativeSample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0F8481E61BF435A800479615 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F8481FB1BF435A800479615 /* LaunchScreen.storyboard in Resources */,
+				0F8481F81BF435A800479615 /* Assets.xcassets in Resources */,
+				0F8481F61BF435A800479615 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D84F046F7B27212DF07E2D8 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C59EEFDA463F21346869F30F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F6C683DAA098854DD33E4B93 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0F8481E41BF435A800479615 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F8482371BF43D8600479615 /* ConstraintUtilities+Matching.m in Sources */,
+				0F8482361BF43D8600479615 /* ConstraintUtilities+Layout.m in Sources */,
+				0F84823B1BF43D8600479615 /* View-Nametag.m in Sources */,
+				0F8482341BF43D8600479615 /* ConstraintUtilities+Description.m in Sources */,
+				0F8482391BF43D8600479615 /* NSObject-Nametag.m in Sources */,
+				0F84823A1BF43D8600479615 /* NSView+BackgroundColor.m in Sources */,
+				0F99ECC41BF5E5690046E10D /* MyCustomViewManager.m in Sources */,
+				0F8482611BF4929C00479615 /* CalendarManager.m in Sources */,
+				0F8482381BF43D8600479615 /* NSObject-Description.m in Sources */,
+				0F8482351BF43D8600479615 /* ConstraintUtilities+Install.m in Sources */,
+				0F8482051BF437AF00479615 /* ReactView.m in Sources */,
+				0F8481F31BF435A800479615 /* ViewController.m in Sources */,
+				0F8481F01BF435A800479615 /* AppDelegate.m in Sources */,
+				0F8481ED1BF435A800479615 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0F8481F41BF435A800479615 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F8481F51BF435A800479615 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0F8481F91BF435A800479615 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F8481FA1BF435A800479615 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0F8481FD1BF435A800479615 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0F8481FE1BF435A800479615 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0F8482001BF435A800479615 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0366A314E6F209E1E3EC6E40 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MyFrameWork",
+				);
+				GCC_PREFIX_HEADER = MyReactNativeSample/PrefixHeader.pch;
+				INFOPLIST_FILE = MyReactNativeSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HotWordLand.MyReactNativeSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0F8482011BF435A800479615 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D6DEAD36E99F7EBC03A9F50 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MyFrameWork",
+				);
+				GCC_PREFIX_HEADER = MyReactNativeSample/PrefixHeader.pch;
+				INFOPLIST_FILE = MyReactNativeSample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.HotWordLand.MyReactNativeSample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0F8481E31BF435A800479615 /* Build configuration list for PBXProject "MyReactNativeSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F8481FD1BF435A800479615 /* Debug */,
+				0F8481FE1BF435A800479615 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F8481FF1BF435A800479615 /* Build configuration list for PBXNativeTarget "MyReactNativeSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F8482001BF435A800479615 /* Debug */,
+				0F8482011BF435A800479615 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0F8481E01BF435A800479615 /* Project object */;
+}
