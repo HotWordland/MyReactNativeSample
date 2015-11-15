@@ -2,6 +2,7 @@
 'use strict';
 
 var React = require('react-native');
+var BASE_URL = 'https://api.github.com/search/repositories?q=';
 
 var {
   StyleSheet,
@@ -18,9 +19,27 @@ var MyReactNativeSample = React.createClass({
                autoCorrect={false}
                placeholder="Search for a Project..."
                style={styles.searchBarInput}
+               onEndEditing={this.onSearchChange}
       />
       </View>
     );
+  },
+  onSearchChange : function(event : Object){
+   var searchTerm = event.nativeEvent.text.tolowerCase();
+   var queryURL = BASE_URL + encodeURIComponent(searchTerm);
+   fetch(queryURL)
+   .then((response) => response.json())
+   .then((responseData)=>{
+    if (responseData.items) {
+      this.setState({
+        dataSource : this.state.dataSource.cloneWithRows
+        (responseData.items),
+      });
+      }
+    }
+   })
+   .done();
+
   }
 });
 
