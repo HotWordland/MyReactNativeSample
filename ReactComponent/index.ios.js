@@ -12,87 +12,40 @@ var {
   Text,
   ListView,
   Image,
+  NavigatorIOS,
 } = React;
 
 var MyReactNativeSample = React.createClass({
-  getInitialState : function() {
-  return {
-    dataSource : new ListView.DataSource({
-      rowHasChanged:(row1,row2) => row1 !== row2,
-    }),
-  };
-  },
   render: function() {
-    var content;
-      if (this.state.dataSource.getRowCount() === 0) {
-        content = <Text>Please enter a search term to see results.</Text>
-      }else{
-        content = 
-        <ListView
-        ref="ListView"
-        dataSource={this.state.dataSource}
-        renderRow={this.renderRow}
-        automaticallyAdjustContentInsets={false}
-        keyboradDismissMode="OnDrag"
-        keyboradShouldPersistTags={true}
-        showsVerticalScrollIndicator={true} 
-        />;
-      }
-    return (
-      <View style={styles.container}>
-      <TextInput
-               autoCapitalize="none"
-               autoCorrect={false}
-               placeholder="Search for a Project..."
-               style={styles.searchBarInput}
-               onEndEditing={this.onSearchChange}
+    return(
+       <NavigatorIOS
+        style={styles.container}
+        initialRoute={{
+          title: 'HomeIndex',
+          component: HomeIndexScene,
+          passProps: {
+          
+            },
+        }}
+       // tintColor="#EAEAEA"
       />
-      {content}
-      </View>
-    );
-  },
-  renderRow : function(repo : Object) {
-  return(
-    <View>
-      <View style={styles.row}>
-        <Image
-          style={styles.profpic}
-          source={{uri: repo.owner.avatar_url}} />
-        
-        <View style={styles.textContainer}>
-        <Text>{repo.name}</Text>
-     
-
-        <Text>地址:{repo.archive_url}</Text>
-
-        <Text>描述:{repo.description}</Text>
-       </View>
-        </View>
-        <View style={styles.cellBorder} />  
-    </View>
-    );
-  },
-  onSearchChange : function(event : Object){
-   var searchTerm = event.nativeEvent.text.toLowerCase();
-   var queryURL = BASE_URL + encodeURIComponent(searchTerm);
-   fetch(queryURL)
-   .then((response) => response.json())
-   .then((responseData)=>{
-    if (responseData.items) {
-      this.setState({
-        dataSource : this.state.dataSource.cloneWithRows
-        (responseData.items),
-      });
-    }
-   }).done();
- },
+    )
+  }
 });
-
+var HomeIndexScene = React.createClass({
+  render : function(){
+    return(
+     <View style={styles.row}>
+        <Text style={styles.rowText}>GitFinder</Text>
+    </View>
+      )
+  }
+})
 
 var styles = StyleSheet.create({
   container:{
    flex : 1,
-   backgroundColor : 'white',
+  
   },
   searchBarInput:{
     marginTop : 30,
@@ -103,10 +56,19 @@ var styles = StyleSheet.create({
     backgroundColor : '#EAEAEA',
   },
   row:{
-    alignItems : 'flex-start',
-    backgroundColor:'white',
+    //flex : 1,
+    marginTop : 64,
+    height:50,
+    // marginTop:64,
+    alignItems : 'center',
     // flexDirection:'column',
-    padding:5,
+    // padding:5,
+    backgroundColor : '#EAEAEA',
+    // alignItems : 'center',
+
+  },
+  rowText:{
+    // alignSelf : 'center',
   },
   cellBorder:{
     backgroundColor:'rgb(0,0,0,1)',
