@@ -23,7 +23,7 @@
     [self addSubview:rootView];
     [rootView setTranslatesAutoresizingMaskIntoConstraints:NO];
     CENTER(rootView);
-    CONSTRAIN_SIZE(rootView, SCREEN_WIDTH, SCREEN_HEIGHT - 64);
+    CONSTRAIN_SIZE(rootView, SCREEN_WIDTH, SCREEN_HEIGHT);
 }
 /*
 // Only override drawRect: if you perform custom drawing.

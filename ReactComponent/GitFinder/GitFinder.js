@@ -14,7 +14,7 @@ var {
   Image,
 } = React;
 
-var MyReactNativeSample = React.createClass({
+var GitFinderScene = React.createClass({
   getInitialState : function() {
   return {
     dataSource : new ListView.DataSource({
@@ -93,6 +93,7 @@ var styles = StyleSheet.create({
   container:{
    flex : 1,
    backgroundColor : 'white',
+   marginTop : 64,
   },
   searchBarInput:{
     marginTop : 30,
@@ -124,4 +125,4 @@ var styles = StyleSheet.create({
 });
 
 
-React.AppRegistry.registerComponent('MyReactNativeSample', () => MyReactNativeSample);
+module.exports = GitFinderScene;

@@ -4,6 +4,8 @@
 var React = require('react-native');
 var BASE_URL = 'https://api.github.com/search/repositories?q=';
 
+
+
 var {
   AppRegistry,
   StyleSheet,
@@ -13,21 +15,25 @@ var {
   ListView,
   Image,
   NavigatorIOS,
+  TouchableHighlight,
 } = React;
 
 var MyReactNativeSample = React.createClass({
   render: function() {
     return(
-       <NavigatorIOS
+      <NavigatorIOS
         style={styles.container}
         initialRoute={{
-          title: 'HomeIndex',
+          title: 'Home',
           component: HomeIndexScene,
           passProps: {
-          
+           
             },
         }}
-       // tintColor="#EAEAEA"
+        itemWrapperStyle={styles.itemWrapper}
+        tintColor="black"
+        barTintColor="white"
+        titleTextColor="black"
       />
     )
   }
@@ -35,9 +41,56 @@ var MyReactNativeSample = React.createClass({
 var HomeIndexScene = React.createClass({
   render : function(){
     return(
-     <View style={styles.row}>
-        <Text style={styles.rowText}>GitFinder</Text>
-    </View>
+    
+                 <View style = {styles.content}> 
+                  <TouchableHighlight onPress={() => {
+                    var GitFinderScene  = require('./GitFinder/GitFinder');
+
+                    this.props.navigator.push({
+                      title: "GitFinder",
+                      component: GitFinderScene,
+                    });
+                  }
+                  }>   
+                    <View style={styles.messageBox}>
+                        <View>
+                            <Text style={styles.messageBoxTitleText}>GitFinder</Text>
+                        </View>
+                        <View>
+                            <Text style={styles.messageBoxBodyText}>搜索github的仓库.</Text>
+                        </View>
+                    </View>
+                   </TouchableHighlight>
+
+                  <TouchableHighlight onPress={() => {
+                    var NavigatorScene  = require('./Navigator/Navigator');
+
+                    this.props.navigator.push({
+                      title: "NavigatorExample",
+                      component: NavigatorScene,
+                    });
+                  }
+                  }>   
+                   <View style={styles.messageBox}>
+                        <View>
+                            <Text style={styles.messageBoxTitleText}>Navigator</Text>
+                        </View>
+                        <View>
+                            <Text style={styles.messageBoxBodyText}>Facebook-js实现Navi方案</Text>
+                        </View>
+                    </View>
+                    </TouchableHighlight>
+
+                    <View style={styles.messageBox}>
+                        <View>
+                            <Text style={styles.messageBoxTitleText}>更新中...</Text>
+                        </View>
+                        <View>
+                            <Text style={styles.messageBoxBodyText}>更新中...</Text>
+                        </View>
+                    </View>
+
+                  </View>
       )
   }
 })
@@ -45,44 +98,45 @@ var HomeIndexScene = React.createClass({
 var styles = StyleSheet.create({
   container:{
    flex : 1,
-  
-  },
-  searchBarInput:{
-    marginTop : 30,
-    padding : 5,
-    fontSize : 15,
-    //flex : 1,
-    height : 30,
-    backgroundColor : '#EAEAEA',
-  },
-  row:{
-    //flex : 1,
-    marginTop : 64,
-    height:50,
-    // marginTop:64,
-    alignItems : 'center',
-    // flexDirection:'column',
-    // padding:5,
-    backgroundColor : '#EAEAEA',
-    // alignItems : 'center',
+   //backgroundColor : "black",
+
 
   },
-  rowText:{
-    // alignSelf : 'center',
+  content : {
+  backgroundColor:'#ebeef0',
+        // flex:1,
+   marginTop : 64,
+   marginLeft : 0,
+   marginRight : 0,
+   marginBottom : 0,
+        flexDirection:'column',
+        alignItems:'center',
+        //justifyContent:'center'
   },
-  cellBorder:{
-    backgroundColor:'rgb(0,0,0,1)',
-    height:1,
-    marginLeft:4,
-  },
-  profpic:{
-     width:50,
-     height:50,
-  },
-  textContainer:{
-    marginLeft:60,
-    marginTop:-50,
-  },
+   messageBox:{
+        marginTop : 5,
+        backgroundColor:'#ef553a',
+        width:300,
+        paddingTop:10,
+        paddingBottom:20,
+        paddingLeft:20,
+        paddingRight:20, 
+        borderRadius:10,
+
+
+    },
+    messageBoxTitleText:{
+        fontWeight:'bold',
+        color:'#fff',
+        textAlign:'center',
+        fontSize:20,
+        marginBottom:10
+    },
+    messageBoxBodyText:{
+        color:'#fff',
+        textAlign:'center',
+        fontSize:16
+    },
 });
 
 
