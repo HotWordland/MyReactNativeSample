@@ -19,7 +19,23 @@ var {
 } = React;
 
 var MyReactNativeSample = React.createClass({
+   getInitialState: function() {
+    return {
+      openExternalExample: (null: ?false),
+    };
+  },
   render: function() {
+    if (this.state.openExternalExample) {
+       var NavigatorExample = require('./Navigator/Navigator')
+      return (
+        <NavigatorExample
+        onExit={() => {
+            this.setState({ openExternalExample: null, });
+          }}
+        />
+      );
+    }
+
     return(
       <NavigatorIOS
         style={styles.container}
@@ -27,7 +43,9 @@ var MyReactNativeSample = React.createClass({
           title: 'Home',
           component: HomeIndexScene,
           passProps: {
-           
+              onExternalExampleRequested: (mark) => {
+              this.setState({ openExternalExample: mark, });
+            },
             },
         }}
         itemWrapperStyle={styles.itemWrapper}
@@ -63,12 +81,14 @@ var HomeIndexScene = React.createClass({
                    </TouchableHighlight>
 
                   <TouchableHighlight onPress={() => {
-                    var NavigatorScene  = require('./Navigator/Navigator');
+                    // var NavigatorScene  = require('./Navigator/Navigator');
 
-                    this.props.navigator.push({
-                      title: "NavigatorExample",
-                      component: NavigatorScene,
-                    });
+                    // this.props.navigator.push({
+                    //   title: "NavigatorExample",
+                    //   component: NavigatorScene,
+                    // });
+                    this.props.onExternalExampleRequested(true);
+
                   }
                   }>   
                    <View style={styles.messageBox}>
@@ -109,7 +129,7 @@ var styles = StyleSheet.create({
    marginLeft : 0,
    marginRight : 0,
    marginBottom : 0,
-        flexDirection:'column',
+   flexDirection:'column',
         alignItems:'center',
         //justifyContent:'center'
   },
