@@ -5,6 +5,8 @@
 
 ##内容涉及 : 目前为 "IOS原生导航" "React-Native重写的Navigator导航" "ListView用法" "网络请求" "React-Native中的setState" "点击事件" 因为工作时间原因后面会持续更新...
 
+##项目配置了node_module 因为文件太大没有上传 如果没有配置node的需要配置才能运行项目 配置node信息请参照React-Native的官网
+
 #GitFinderDemo
 ![](https://github.com/HotWordland/MyReactNativeSample/blob/master/demonstrateGif/rn01.gif)
 #NavigatorDemo
