@@ -2,49 +2,47 @@
 'use strict';
 
 var React = require('react-native');
-var BASE_URL = 'https://api.github.com/search/repositories?q=';
-
-
-
 var {
   AppRegistry,
   StyleSheet,
   View,
-  TextInput,
   Text,
-  ListView,
-  Image,
   NavigatorIOS,
   TouchableHighlight,
 } = React;
 
 var MyReactNativeSample = React.createClass({
+  //在这里声明了一个变量(在React-Native里面叫做状态) 有什么用呢？在stackoverflow里找到一句话 "React will automatically do a re-render when state or props change, so there's no need for this." 就是说当我们改变
+  //了状态的值 那么 React就会自动地重新渲染界面 执行render方法
    getInitialState: function() {
     return {
-      openExternalExample: (null: ?false),
+      openNavigatorExample: (null: ?false),
     };
   },
+  //渲染
   render: function() {
-    if (this.state.openExternalExample) {
+    //判断一下是不是打开了navigator的例子是的话我们就将界面重新渲染成navigatorExample 不是的话那么就渲染成本来的样子
+    if (this.state.openNavigatorExample) {
        var NavigatorExample = require('./Navigator/Navigator')
       return (
         <NavigatorExample
-        onExit={() => {
-            this.setState({ openExternalExample: null, });
+          onExit={() => {
+            this.setState({ openNavigatorExample: null, });
           }}
         />
       );
     }
 
     return(
+      //React-Native的NavigatorIOS控件 详细的用法和信息可以在官方文档搜索
       <NavigatorIOS
         style={styles.container}
         initialRoute={{
           title: 'Home',
           component: HomeIndexScene,
           passProps: {
-              onExternalExampleRequested: (mark) => {
-              this.setState({ openExternalExample: mark, });
+              onNavigatorExampleRequested: (mark) => {
+              this.setState({ openNavigatorExample: mark, });
             },
             },
         }}
@@ -56,6 +54,7 @@ var MyReactNativeSample = React.createClass({
     )
   }
 });
+//NavigatorIOS 第一个Scene
 var HomeIndexScene = React.createClass({
   render : function(){
     return(
@@ -63,7 +62,7 @@ var HomeIndexScene = React.createClass({
                  <View style = {styles.content}> 
                   <TouchableHighlight onPress={() => {
                     var GitFinderScene  = require('./GitFinder/GitFinder');
-
+                    //这里使用的NavigatorIOS进行跳转
                     this.props.navigator.push({
                       title: "GitFinder",
                       component: GitFinderScene,
@@ -81,13 +80,8 @@ var HomeIndexScene = React.createClass({
                    </TouchableHighlight>
 
                   <TouchableHighlight onPress={() => {
-                    // var NavigatorScene  = require('./Navigator/Navigator');
-
-                    // this.props.navigator.push({
-                    //   title: "NavigatorExample",
-                    //   component: NavigatorScene,
-                    // });
-                    this.props.onExternalExampleRequested(true);
+                    //这里点击触发重新渲染成navigatorExample界面
+                    this.props.onNavigatorExampleRequested(true);
 
                   }
                   }>   
@@ -114,24 +108,19 @@ var HomeIndexScene = React.createClass({
       )
   }
 })
-
+//样式
 var styles = StyleSheet.create({
   container:{
    flex : 1,
-   //backgroundColor : "black",
-
-
   },
   content : {
-  backgroundColor:'#ebeef0',
-        // flex:1,
    marginTop : 64,
    marginLeft : 0,
    marginRight : 0,
    marginBottom : 0,
    flexDirection:'column',
-        alignItems:'center',
-        //justifyContent:'center'
+   alignItems:'center',
+  //justifyContent:'center'
   },
    messageBox:{
         marginTop : 5,
@@ -142,8 +131,6 @@ var styles = StyleSheet.create({
         paddingLeft:20,
         paddingRight:20, 
         borderRadius:10,
-
-
     },
     messageBoxTitleText:{
         fontWeight:'bold',
@@ -159,5 +146,5 @@ var styles = StyleSheet.create({
     },
 });
 
-
+//注册程序的入口
 React.AppRegistry.registerComponent('MyReactNativeSample', () => MyReactNativeSample);

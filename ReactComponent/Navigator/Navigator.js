@@ -13,18 +13,46 @@ var {
 
 var MySceneComponent = React.createClass({
     render : function(){
+
+      var dismissMessageBox;
+      if (this.props.message) {
+        dismissMessageBox = <View style={styles.dismissMessageBox}>
+                        <View>
+                            <Text style={styles.dismissMessageBoxTitleText}>{this.props.message}</Text>
+                        </View>
+                    </View>
+      };
     	return(
     		 <View style = {styles.content}> 
+         {dismissMessageBox}
 	          <TouchableHighlight onPress={() => {
-                   this.props.navigator.push({
-              message: 'Swipe right to dismiss',
+             this.props.navigator.push({
+              message: '向下滑动移出',
+              //配置信息 : 过渡的动画属性
               sceneConfig: Navigator.SceneConfigs.FloatFromBottom,
             });
               }
                   }>   
                     <View style={styles.messageBox}>
                         <View>
-                            <Text style={styles.messageBoxTitleText}>Push</Text>
+                            <Text style={styles.messageBoxTitleText}>Push FloatFromBottom</Text>
+                        </View>
+                        <View>
+                            <Text style={styles.messageBoxBodyText}>点击推入下一个页面.</Text>
+                        </View>
+                    </View>
+                   </TouchableHighlight>
+
+                    <TouchableHighlight onPress={() => {
+             this.props.navigator.push({
+              message: '右滑动移出(从左边缘)',
+              sceneConfig: Navigator.SceneConfigs.FloatFromRight,
+            });
+              }
+                  }>   
+                    <View style={styles.messageBox}>
+                        <View>
+                            <Text style={styles.messageBoxTitleText}>Push FloatFromRight</Text>
                         </View>
                         <View>
                             <Text style={styles.messageBoxBodyText}>点击推入下一个页面.</Text>
@@ -51,31 +79,26 @@ var MySceneComponent = React.createClass({
   }
 });
 var NavigatorExample = React.createClass({
-	render: function() {
-    return (
-	<Navigator
-	   initialRoute={{name: 'My First Scene', index: 0}}
-	   renderScene={(route, navigator) =>
+  //navigator 渲染每个Scene的入口
+  renderScene: function(route, navigator) {
+      return (
       <MySceneComponent
         name={route.name}
         navigator={navigator}
-        onExit={() => {
-        	this.props.onExit();
-        }}
-        onForward={() => {
-          var nextIndex = route.index + 1;
-          navigator.push({
-            name: 'Scene ' + nextIndex,
-            index: nextIndex,
-          });
-        }}
-        onBack={() => {
-          if (route.index > 0) {
-            navigator.pop();
-          }
-        }}
+        message={route.message}
+        onExit={this.props.onExit}
+       
       />
-    }
+        );
+  },
+	render: function() {
+    return (
+	<Navigator
+  //初始化
+	   initialRoute={{name: 'My First Scene', index: 0}}
+     //渲染Scene的入口
+	   renderScene={ this.renderScene }
+     //配置Scene信息
     configureScene={(route) => {
           if (route.sceneConfig) {
             return route.sceneConfig;
@@ -90,13 +113,8 @@ var NavigatorExample = React.createClass({
 var styles = StyleSheet.create({
   container:{
    flex : 1,
-   //backgroundColor : "black",
-
-
   },
   content : {
-  backgroundColor:'#ebeef0',
-        // flex:1,
    marginTop : 64,
    marginLeft : 0,
    marginRight : 0,
@@ -128,6 +146,22 @@ var styles = StyleSheet.create({
         color:'#fff',
         textAlign:'center',
         fontSize:16
+    },
+    dismissMessageBox:{
+        marginTop : 5,
+        backgroundColor:'#ef553a',
+        width:300,
+        paddingTop:10,
+        paddingBottom:10,
+        paddingLeft:20,
+        paddingRight:20, 
+        borderRadius:10,
+    },
+     dismissMessageBoxTitleText:{
+        fontWeight:'bold',
+        color:'#fff',
+        textAlign:'center',
+        fontSize:20,
     },
 });
 

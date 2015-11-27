@@ -17,6 +17,7 @@ var {
 var GitFinderScene = React.createClass({
   getInitialState : function() {
   return {
+    //数据源
     dataSource : new ListView.DataSource({
       rowHasChanged:(row1,row2) => row1 !== row2,
     }),
@@ -24,9 +25,11 @@ var GitFinderScene = React.createClass({
   },
   render: function() {
     var content;
+    //默认的提示
       if (this.state.dataSource.getRowCount() === 0) {
         content = <Text>Please enter a search term to see results.</Text>
       }else{
+        //声明ListView组件的信息
         content = 
         <ListView
         ref="ListView"
@@ -51,6 +54,7 @@ var GitFinderScene = React.createClass({
       </View>
     );
   },
+  //渲染每个Row
   renderRow : function(repo : Object) {
   return(
     <View>
@@ -72,9 +76,11 @@ var GitFinderScene = React.createClass({
     </View>
     );
   },
+  //搜索文字改变的代理事件
   onSearchChange : function(event : Object){
    var searchTerm = event.nativeEvent.text.toLowerCase();
    var queryURL = BASE_URL + encodeURIComponent(searchTerm);
+   //网络请求
    fetch(queryURL)
    .then((response) => response.json())
    .then((responseData)=>{
