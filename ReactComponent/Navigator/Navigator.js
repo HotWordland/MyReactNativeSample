@@ -30,6 +30,7 @@ var MySceneComponent = React.createClass({
               message: '向下滑动移出',
               //配置信息 : 过渡的动画属性
               sceneConfig: Navigator.SceneConfigs.FloatFromBottom,
+
             });
               }
                   }>   
@@ -38,15 +39,18 @@ var MySceneComponent = React.createClass({
                             <Text style={styles.messageBoxTitleText}>Push FloatFromBottom</Text>
                         </View>
                         <View>
-                            <Text style={styles.messageBoxBodyText}>点击推入下一个页面.</Text>
+                            <Text style={styles.messageBoxBodyText}>点击推入下一个页面. + {this.props.name}</Text>
                         </View>
                     </View>
                    </TouchableHighlight>
 
-                    <TouchableHighlight onPress={() => {
+              <TouchableHighlight onPress={() => {
+            var nextIndex = index + 1;
              this.props.navigator.push({
               message: '右滑动移出(从左边缘)',
               sceneConfig: Navigator.SceneConfigs.FloatFromRight,
+              index : nextIndex,
+              name : 'scene' + nextIndex,
             });
               }
                   }>   
@@ -85,8 +89,8 @@ var NavigatorExample = React.createClass({
       <MySceneComponent
         name={route.name}
         navigator={navigator}
-        message={route.message}
-        onExit={this.props.onExit}
+        onExit={this.props.onExit} message={route.message}
+
        
       />
         );
@@ -97,7 +101,7 @@ var NavigatorExample = React.createClass({
   //初始化
 	   initialRoute={{name: 'My First Scene', index: 0}}
      //渲染Scene的入口
-	   renderScene={ this.renderScene }
+	   renderScene={ this.renderScene}
      //配置Scene信息
     configureScene={(route) => {
           if (route.sceneConfig) {

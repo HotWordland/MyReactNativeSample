@@ -18,6 +18,7 @@ var MyReactNativeSample = React.createClass({
    getInitialState: function() {
     return {
       openNavigatorExample: (null: ?false),
+      openFlexLayoutExample:(null: ?false),
     };
   },
   //渲染
@@ -34,6 +35,18 @@ var MyReactNativeSample = React.createClass({
       );
     }
 
+    if (this.state.openFlexLayoutExample) {
+       var FlexLayoutExample = require('./FlexLayout/FlexLayout')
+
+      return (
+        <FlexLayoutExample
+          onExit={() => {
+            this.setState({ openFlexLayoutExample: null, });
+          }}
+        />
+      );
+    }
+
     return(
       //React-Native的NavigatorIOS控件 详细的用法和信息可以在官方文档搜索
       <NavigatorIOS
@@ -44,6 +57,9 @@ var MyReactNativeSample = React.createClass({
           passProps: {
               onNavigatorExampleRequested: (mark) => {
               this.setState({ openNavigatorExample: mark, });
+            },
+            onFlexLayoutExampleRequested: (mark) => {
+              this.setState({ openFlexLayoutExample: mark, });
             },
             },
         }}
@@ -119,6 +135,15 @@ var HomeIndexScene = React.createClass({
                       title: "Animation",
                       component: AnimationScene,
                     });
+                    }}
+                    />
+
+                    <NaviBubble
+                    Title="FlexLayout"
+                    Descri="布局"
+                    navigator={this.props.navigator}
+                    ClickAction={()=>{
+                     this.props.onFlexLayoutExampleRequested(true);
                     }}
                     />
 
